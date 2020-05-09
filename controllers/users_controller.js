@@ -1,3 +1,5 @@
 module.exports.users = function(req,res){
-    return res.end('<h1>What up!<h1>')
+    res.render('users',{
+        title: "users"
+    });
 }
