@@ -7,6 +7,5 @@ const homeController = require('../controllers/home_controller');
 
 router.get("/",homeController.home);
 
-router.get("/profile",homeController.profile);
-
+router.use("/user",require("./users"));
 module.exports = router;
