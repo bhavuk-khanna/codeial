@@ -9,7 +9,8 @@ router.get("/",usersController.users);
 router.get("/signup",usersController.signUp);
 router.get("/signin",usersController.signIn);
 router.post("/create", usersController.create);
-router.get('/profile',passport.checkAuthentication,usersController.profile);
+router.get('/profile/:id',passport.checkAuthentication,usersController.profile);
+router.post('/update/:id',passport.checkAuthentication,usersController.update);
 //use passport as a middleware to authenticate 
 router.post('/create-session',passport.authenticate(
     'local',
